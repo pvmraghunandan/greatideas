@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section scripts
+{
+<script src="~/Scripts/jquery.signalR-2.1.2.js"></script>
+    <script src="~/SignalR/Hubs"></script>
+    <script src="~/js/app.js"></script>
+}
+<div class="row">
+    <div class="col-md-12">
+        <h1>SignalR Demo</h1>
+        <p>You're on server:&nbsp;@Environment.MachineName</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-5">
+        <p>What is your name?</p>
+        <input type="text"
+               placeholder="type in your name"
+               id="personName" />
+        <p>Please type in a message</p>
+        <textarea cols="50" rows="10"
+                  id="personMessage"></textarea>
+        <button id="sendMessage">Send!</button>
+    </div>
+    <div class="col-md-7" id="messageList">
+    </div>
+
+    <div>
+        <button id="btnMyMethod">My Method</button>
+        <button id="btnMyMethodParameter">My Method with Parameter</button>
+        <button id="btnMyMethodParameterComplex">My Method with Complex Parameter</button>
+    </div>
+</div>
